@@ -93,7 +93,7 @@ class SESBackend(BaseEmailBackend):
 
         try:
             self.connection = boto3.client(
-                'ses',
+                'sesv2',
                 aws_access_key_id=self._access_key_id,
                 aws_secret_access_key=self._access_key,
                 aws_session_token=self._session_token,

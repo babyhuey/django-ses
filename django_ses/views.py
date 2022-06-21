@@ -106,7 +106,7 @@ def dashboard(request):
         return cached_view
 
     ses_conn = boto3.client(
-        'ses',
+        'sesv2',
         aws_access_key_id=settings.ACCESS_KEY,
         aws_secret_access_key=settings.SECRET_KEY,
         aws_session_token=settings.SESSION_TOKEN,
@@ -155,7 +155,7 @@ class DashboardView(TemplateView):
         context = super().get_context_data(**kwargs)
 
         ses_conn = boto3.client(
-            'ses',
+            'sesv2',
             aws_access_key_id=settings.ACCESS_KEY,
             aws_secret_access_key=settings.SECRET_KEY,
             aws_session_token=settings.SESSION_TOKEN,

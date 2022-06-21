@@ -145,7 +145,7 @@ class SESBackendTest(TestCase):
         self.assertEqual(config_set_callable.message.subject, 'subject')
         self.assertEqual(config_set_callable.dkim_domain, None)
         self.assertEqual(config_set_callable.dkim_key, None)
-        self.assertEqual(config_set_callable.dkim_selector, 'ses')
+        self.assertEqual(config_set_callable.dkim_selector, 'sesv2')
         self.assertEqual(config_set_callable.dkim_headers, ('From', 'To', 'Cc', 'Subject'))
 
     def test_dkim_mail(self):

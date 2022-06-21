@@ -29,7 +29,7 @@ AWS_SES_CONFIGURATION_SET = getattr(settings, 'AWS_SES_CONFIGURATION_SET', None)
 
 DKIM_DOMAIN = getattr(settings, "DKIM_DOMAIN", None)
 DKIM_PRIVATE_KEY = getattr(settings, 'DKIM_PRIVATE_KEY', None)
-DKIM_SELECTOR = getattr(settings, 'DKIM_SELECTOR', 'ses')
+DKIM_SELECTOR = getattr(settings, 'DKIM_SELECTOR', 'sesv2')
 DKIM_HEADERS = getattr(settings, 'DKIM_HEADERS',
                        ('From', 'To', 'Cc', 'Subject'))
 

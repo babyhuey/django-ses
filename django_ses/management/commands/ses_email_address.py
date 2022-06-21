@@ -60,7 +60,7 @@ class Command(BaseCommand):
         session_token = settings.SESSION_TOKEN
 
         connection = boto3.client(
-            'ses',
+            'sesv2',
             aws_access_key_id=access_key_id,
             aws_secret_access_key=access_key,
             aws_session_token=session_token,
